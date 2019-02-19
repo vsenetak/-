@@ -1,0 +1,44 @@
+#include <iostream>
+#include <stdio.h>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+setlocale( LC_ALL,"Russian" );    
+cout<<"Практическая работа №3"<<endl;
+cout<<"Выполнил студент группы ИКБО-03-18 Белов Денис"<<endl;
+double a,b;
+cout<<"Введите a,b"<<endl;
+cin>>a>>b;
+double z,t;
+if(a < b)
+{
+    z = sqrt(abs(a*a - b*b));
+}
+else
+{
+    1 - cos(a)*sin(b);
+}
+if (z < b)
+{
+    t = pow(z + a*a*b, 1.0/3.0);
+}
+if(z == b)
+{
+    t = 1 - 1*log10(z) + cos(a*a*b);
+}
+if(z > b)
+{
+    t = 1/cos(z*a);
+}
+if(1/cos(z*a) == 0)
+{
+    cout<<"Ошибка, деление на ноль"<<endl;
+}
+cout<<"a="<<a<<endl;
+cout<<"b="<<b<<endl;
+cout<<"z="<<z<<endl;
+cout<<"t="<<t<<endl;
+return 0;
+}

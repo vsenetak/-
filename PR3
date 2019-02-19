@@ -1,0 +1,96 @@
+#include <iostream>
+using namespace std;
+#include <locale>
+ 
+class kniga {
+public:
+    char janr[10];
+    char avtor[30];
+    char nazvanie[40];
+    int god_izdania;
+    int cena;
+    char c;
+ 
+void set()
+{
+    
+    /*cout<<"Введите жанр:"<<endl;
+    cin>>janr;
+    cout<<"Введите автора:"<<endl;
+    cin>>avtor;
+    cout<<"Введите название:"<<endl;
+    cin>>nazvanie;*/
+    cout<<"Введите год выпуска:"<<endl;
+    cin>>god_izdania;
+    /*cout<<"Введите цену:"<<endl;
+    cin>>cena;*/
+    //cout<<"Что выводим?"<<endl;
+    //cin>>c;
+}
+void show()
+{
+    switch (c)
+	{
+		case '1':
+			cout<<janr<<endl;
+			break;
+		case '2':
+			cout<<avtor<<endl;
+			break;
+		case '3':
+			cout<<nazvanie<<endl;
+			break;
+		case '4':
+			cout<<god_izdania<<endl;
+			break;
+		case '5':
+			cout<<cena<<endl;
+			break;
+		default:
+			cout << "Неверно выбрана операция" << endl;
+	}
+
+}
+
+
+/*void show()
+{
+
+    cout<<"Жанр:"<<janr<<endl;
+    cout<<"Автор:"<<avtor<<endl;
+    cout<<"Название:"<<nazvanie<<endl;
+    cout<<"Год выпуска:"<<god_izdania<<endl;
+    cout<<"Цена:"<<cena<<endl;
+    
+}
+*/
+ 
+};
+ 
+ 
+int main()
+{
+    setlocale(LC_ALL, "Russian");
+    kniga odin, dva, tri;
+ 
+    odin.set();
+    //odin.show();
+    cout<<"************************************"<<endl;
+    //cout<<odin.cena<<endl;
+    //cout<<dva.cena<<endl;
+    //cout<<tri.cena<<endl;
+    dva.set();
+    cout<<"************************************"<<endl;
+    //dva.show();
+    tri.set();
+    cout<<"************************************"<<endl;
+    //tri.show();
+    cout<<odin.god_izdania<<endl;
+    cout<<dva.god_izdania<<endl;
+    cout<<tri.god_izdania<<endl;
+    
+
+ 
+    
+    return 0;
+}

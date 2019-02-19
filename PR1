@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	setlocale(LC_ALL, "Russian");
+	cout << "Практическая работа №1" << endl;
+	cout << "Выполнил студент группы ИКБО-03-18 Белов Денис" << endl << endl;
+
+	float a, b, x;
+	char c;
+	cout << "Число а = " << endl;
+	cin >> a;
+	cout << "Число b = " << endl;
+	cin >> b;
+	cout << "Выберите операцию " ;
+	cin >> c;
+	cin.ignore();
+
+	switch (c)
+	{
+		case '+':
+			x = a + b;
+			break;
+		case '-':
+			x = a - b;
+			break;
+		case '*':
+			x = a * b;
+			break;
+		case '/':
+			x = a / b;
+			break;
+		default:
+			cout << "Неверно выбрана операция" << endl;
+	}
+
+	cout << "Результат: " << x;
+
+	return 0;
+
+}
+
